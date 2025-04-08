@@ -9,6 +9,10 @@ import base64
 from pathlib import Path
 from PIL import Image
 
+
+
+#this script is converting the annotation json files from the FSOCO dataset to annotation files in YOLO format, in order to train segmentation model.
+
 # Paths
 ANNOTATIONS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Seg_labels\test_JSON"
 OUTPUT_LABELS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Seg_labels\test"
@@ -87,4 +91,4 @@ for filename in os.listdir(ANNOTATIONS_DIR):
         image_path = os.path.join(IMAGE_DIR, filename.removesuffix(".json"))
         process_annotation(os.path.join(ANNOTATIONS_DIR, filename), image_path)
 
-print("Conversion completed! YOLO labels saved in:", OUTPUT_LABELS_DIR)
+print("Completed results are in:", OUTPUT_LABELS_DIR)
