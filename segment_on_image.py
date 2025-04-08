@@ -22,22 +22,21 @@ with open(label_path, 'r') as file:
 
 
 
-# height, width, _ = image.shape
-# for line in lines:
-#     values = list(map(float, line.strip().split()))
-#     class_id = int(values[0])  # First value is the class ID
-#     points = values[1:]  # Remaining values are segmentation points
-#
-#     if len(points) % 2 != 0:
-#         print(f"Error: Invalid segmentation format in {label_path}")
-#         continue
-#
-#     # Convert normalized coordinates to pixel values
-#     polygon = np.array([(int(x * width), int(y * height)) for x, y in zip(points[0::2], points[1::2])], np.int32)
-#
-#     # Draw the polygon mask
-#     cv2.polylines(image, [polygon], isClosed=True, color=(0, 255, 0), thickness=2)
-#     cv2.fillPoly(image, [polygon], color=(0, 255, 0, 50))  # Fill with transparency
+height, width, _ = image.shape
+for line in lines:
+    values = list(map(float, line.strip().split()))
+    class_id = int(values[0])  # First value is the class ID
+    points = values[1:]  # Remaining values are segmentation points
+
+    if len(points) % 2 != 0:
+        print(f"Error: Invalid segmentation format in {label_path}")
+        continue
+
+    polygon = np.array([(int(x * width), int(y * height)) for x, y in zip(points[0::2], points[1::2])], np.int32)
+
+    # Draw the polygon mask
+    cv2.polylines(image, [polygon], isClosed=True, color=(0, 255, 0), thickness=2)
+    cv2.fillPoly(image, [polygon], color=(0, 255, 0, 50))  # Fill with transparency
 
 
 
