@@ -14,9 +14,9 @@ from PIL import Image
 #this script is converting the annotation json files from the FSOCO dataset to annotation files in YOLO format, in order to train segmentation model.
 
 # Paths
-ANNOTATIONS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Seg_labels\test_JSON"
-OUTPUT_LABELS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Seg_labels\test"
-IMAGE_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Seg_images\test"
+ANNOTATIONS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Segmentation\labels\test_JSON"
+OUTPUT_LABELS_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Segmentation\labels\test"
+IMAGE_DIR = r"G:\Shared drives\BGR Drive\רכב אוטונומי 2024\Autonomous_Divison\PM\Camera\FSOCO_dataset\fsoco_yolov5\Segmentation\labels\test"
 
 
 # Ensure output directory exists
